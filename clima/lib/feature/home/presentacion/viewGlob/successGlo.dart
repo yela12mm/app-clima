@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 Scaffold Success() {
   return Scaffold(
     bottomNavigationBar: BottomNavigationBar(
+      backgroundColor: Color(0xFFFFB365),
       items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.person_2_outlined),
@@ -18,11 +19,13 @@ Scaffold Success() {
     ),
     
     appBar: AppBar(
-      title: Text(
-    'Clima',
-        style: GoogleFonts.nunito(
+    backgroundColor: Color(0xFFFFB365),
+    title: Text(
+    'Climate',
+        style: GoogleFonts.arimo(
           textStyle: const TextStyle(
             
+
             fontSize: 25,
            
           ),
@@ -40,6 +43,15 @@ Scaffold Success() {
       ],
     ),
     body: Stack(
+      children: [
+        Positioned.fill(
+          child:        Image.asset(
+          "assets/images/imgF.jpg"
+
+        )
+        )
+
+      ],
     ),
 
   );
