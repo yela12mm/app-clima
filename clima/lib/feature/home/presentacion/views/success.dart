@@ -1,4 +1,4 @@
-//hay que poner un tamaño al container para que no haya problemas de infinito (que no se visualice el container por el tamaño)
+
 import 'package:flutter/material.dart';
 
 class Success extends StatelessWidget {
