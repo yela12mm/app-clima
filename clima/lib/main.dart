@@ -1,3 +1,5 @@
+
+
 import 'package:clima/feature/home/presentacion/viewGlob/successGlo.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:Success()
+      home:SuccessGlo()
     );
   }
 }     

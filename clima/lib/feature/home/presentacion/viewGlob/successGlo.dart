@@ -1,8 +1,14 @@
+import 'package:clima/feature/home/presentacion/page/home.dart';
+import 'package:clima/feature/home/presentacion/views/success.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Scaffold Success() {
-  return Scaffold(
+class SuccessGlo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    
+    return Scaffold(
+    backgroundColor: Color.fromARGB(255, 255, 229, 203),
     bottomNavigationBar: BottomNavigationBar(
       backgroundColor: Color(0xFFFFB365),
       items: [
@@ -19,7 +25,7 @@ Scaffold Success() {
     ),
     
     appBar: AppBar(
-    backgroundColor: Color(0xFFFFB365),
+    backgroundColor: Color.fromARGB(255, 255, 180, 106),
     title: Text(
     'Climate',
         style: GoogleFonts.arimo(
@@ -42,18 +48,27 @@ Scaffold Success() {
         SizedBox(width: 10),
       ],
     ),
-    body: Stack(
-      children: [
-        Positioned.fill(
-          child:        Image.asset(
-          "assets/images/imgF.jpg"
 
-        )
-        )
 
-      ],
-    ),
+   body:SingleChildScrollView(
+      child: Center(
+        child:Column(
+    
+          children: [
+            const SizedBox(height: 24),
+            Success(),
+            const SizedBox(height: 10),
+            Home()
+          ],
+        ),
+
+      ),
+    )
+
 
   );
-}
 
+
+
+  }
+}
