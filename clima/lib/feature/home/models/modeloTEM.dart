@@ -5,6 +5,7 @@ class Temperatura extends Equatable {
   final String? region;
   final double? tempC;
 
+
   const Temperatura({
     required this.name,
     required this.region,
@@ -17,8 +18,8 @@ class Temperatura extends Equatable {
 
   factory Temperatura.fromJson(Map<String, dynamic> json) {
     return Temperatura(
-      name: json['name'] as String?,
-      region: json['location']?['region'] as String?,
+      name: json['location']['name'] as String?,
+      region: json['location']['name']?['region'] as String?,
       tempC: (json['current']?['temp_c'] as num?)?.toDouble(),
       
     );

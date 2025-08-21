@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-class   Loading extends StatelessWidget {
+class  Failure extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

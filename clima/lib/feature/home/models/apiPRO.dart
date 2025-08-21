@@ -12,7 +12,7 @@ Future<List<Pronostico>> fetchForecast() async {
     final data = jsonDecode(response.body);
 
     final List forecast = data["forecast"]["forecastday"];
-return forecast.map((day) => Pronostico.fromJson(day)).toList();
+    return forecast.map((day) => Pronostico.fromJson(day)).toList();
 
   } else {
     throw Exception("Error: ${response.statusCode}");

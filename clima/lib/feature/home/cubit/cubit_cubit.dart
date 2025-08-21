@@ -1,8 +1,12 @@
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:clima/feature/home/models/modeloPRO.dart';
+import 'package:clima/feature/home/models/modeloTEM.dart';
+import 'package:equatable/equatable.dart';
 
 part 'cubit_state.dart';
 
-class CubitCubit extends Cubit<CubitState> {
-  CubitCubit() : super(CubitInitial());
+class HomeCubit extends Cubit<CubitState> {
+  final Pronostico pronostico;
+  HomeCubit() : super(CubitState());
+  
 }
