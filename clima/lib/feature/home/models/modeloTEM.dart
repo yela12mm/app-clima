@@ -3,13 +3,12 @@ import 'package:equatable/equatable.dart';
 class Pronostico extends Equatable {
   final String? name;
   final String? region;
-  final double? tempC;
+  final double? tempc;
 
   const Pronostico({
     required this.name,
     required this.region,
     required this.tempC,
-   
   });
 
   @override
@@ -20,7 +19,6 @@ class Pronostico extends Equatable {
       name: json['name'] as String?,
       region: json['location']?['region'] as String?,
       tempC: (json['current']?['temp_c'] as num?)?.toDouble(),
-      
     );
   }
 }
