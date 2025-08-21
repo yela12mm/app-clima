@@ -1,7 +1,7 @@
 //hay que poner un tamaño al container para que no haya problemas de infinito (que no se visualice el container por el tamaño)
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
+class Fail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -11,14 +11,12 @@ class Home extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 132, 170, 124),
         borderRadius: BorderRadius.circular(20),
-      
       ),
       child: Center(
         child: Icon(
           Icons.report_gmailerrorred,
-            size: 50,
-            color: Color.fromARGB(255, 76, 99, 72)
-                      
+          size: 50,
+          color: Color.fromARGB(255, 76, 99, 72),
         ),
       ),
     );
