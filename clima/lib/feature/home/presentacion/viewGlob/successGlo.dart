@@ -1,9 +1,12 @@
+import 'package:clima/feature/home/models/modeloTEM.dart';
 import 'package:clima/feature/home/presentacion/page/home.dart';
 import 'package:clima/feature/home/presentacion/views/success.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SuccessGlo extends StatelessWidget {
+  final Temperatura temperatura;
+  const SuccessGlo({Key? key, required this.temperatura}) : super(key: key);  
   @override
   Widget build(BuildContext context) {
     
@@ -56,7 +59,7 @@ class SuccessGlo extends StatelessWidget {
     
           children: [
             const SizedBox(height: 24),
-            Success(),
+            Success(temperatura:temperatura),
             const SizedBox(height: 10),
             Home()
           ],
