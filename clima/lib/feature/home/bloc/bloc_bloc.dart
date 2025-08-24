@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:clima/feature/home/models/apiTEM.dart';
-import 'package:clima/feature/home/models/modeloPRO.dart';
+import 'package:clima/feature/home/models/modeloTEM.dart';
 import 'package:equatable/equatable.dart';
 
 part 'bloc_event.dart';

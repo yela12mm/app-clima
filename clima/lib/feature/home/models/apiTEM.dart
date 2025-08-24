@@ -1,6 +1,5 @@
 import 'dart:convert';
-
-import 'package:clima/feature/home/models/modeloPRO.dart';
+import 'package:clima/feature/home/models/modeloTEM.dart';
 import 'package:http/http.dart' as http;
 
 Future<Temperatura> fetchCurrentWeather() async {
