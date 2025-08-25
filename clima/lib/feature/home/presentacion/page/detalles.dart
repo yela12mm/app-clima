@@ -1,23 +1,41 @@
-//hay que poner un tamaño al container para que no haya problemas de infinito (que no se visualice el container por el tamaño)
-import 'package:clima/feature/home/cubit/cubit_cubit.dart';
-import 'package:clima/feature/home/presentacion/page/detalles.dart';
-import 'package:flutter/material.dart';
-import 'package:clima/feature/home/models/modeloPRO.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart'; 
 
-class Home extends StatelessWidget {
+import 'package:clima/feature/home/models/modeloPRO.dart';
+import 'package:flutter/material.dart';
+
+import 'package:google_fonts/google_fonts.dart';
+
+class Detalles extends StatelessWidget {
   final List<Pronostico> pronostico;
 
-  const Home({Key? key, required this.pronostico}) : super(key: key);
+  const Detalles({Key? key, required this.pronostico}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: 450,
-      margin: EdgeInsets.all(12),
-      decoration: BoxDecoration(
+      width: double.infinity,
+      decoration: const BoxDecoration(
+      gradient: LinearGradient(
+        colors: [Color.fromARGB(148, 21, 143, 204), Color.fromARGB(255, 180, 186, 194)],
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+      ),
+      ),
+      child:Scaffold(
+
+      backgroundColor: Color.fromARGB(0, 173, 161, 148),
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(0, 255, 181, 106),
+        elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 255, 255, 255)),
+          onPressed: () => Navigator.pop(context),
+       )
+      ),
+      body: Container(
+        height: 500,
+        width: 450,
+        margin: EdgeInsets.all(12),
+        decoration: BoxDecoration(
         color: const Color.fromARGB(68, 255, 255, 255),
         borderRadius: BorderRadius.circular(20),
       ),
@@ -25,7 +43,7 @@ class Home extends StatelessWidget {
         children: [
           Expanded(
             child: ListView.builder(
-              itemCount: pronostico.length >= 3 ? 3 : pronostico.length,
+              itemCount:pronostico.length,
               itemBuilder: (context, index) {
                 final p = pronostico[index];
                 return Padding(
@@ -78,43 +96,15 @@ class Home extends StatelessWidget {
             ),
             
           ),
-          ElevatedButton(
-            
-            onPressed: () {
-              
-              final state = context.read<CubitCubit>().state;
-              if (state is CubitHome ) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => Detalles(pronostico: state.forecast!),
-              
-                  ),
-                );
-              }
-    
-            },
-            child: const Text('Ver pronostico completo'
-            , style: TextStyle(fontSize: 14, color: Color.fromARGB(192, 255, 255, 255))
-            
-            ),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color.fromARGB(173, 108, 194, 243),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-              ),
-              padding: const EdgeInsets.symmetric(
-                horizontal: 32,
-                vertical: 14,
-              ),
-            ),
-          ),
-          SizedBox(height: 10),
-          
+        
+
           
         ],
       ),
 
+      )
+      )
+    
     );
+   }
   }
-}
