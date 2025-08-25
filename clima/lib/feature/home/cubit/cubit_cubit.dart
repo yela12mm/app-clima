@@ -10,7 +10,7 @@ class CubitCubit extends Cubit<CubitState> {
   CubitCubit() : super(CubitLoad());
 
   Future<void> verTiempo() async {
-    emit(CubitHome(forecast: pronostico, forecastday: <Pronostico>[])); 
+    emit(CubitLoad()); 
     try {
       final pronostico = await fetchForecast();
       emit(CubitHome(forecast: pronostico, forecastday: <Pronostico>[]));
@@ -18,4 +18,4 @@ class CubitCubit extends Cubit<CubitState> {
       emit(CubitFail());
     }
   }
-}
+  }

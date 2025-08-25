@@ -4,7 +4,7 @@ class Failure extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 300,
       width: 450,
       margin: EdgeInsets.all(12),
       decoration: BoxDecoration(

@@ -5,18 +5,18 @@ class Fail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 600,
+      height: 200,
       width: 450,
       margin: EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 132, 170, 124),
+        color: const Color.fromARGB(68, 255, 255, 255),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Center(
         child: Icon(
           Icons.report_gmailerrorred,
           size: 50,
-          color: Color.fromARGB(255, 76, 99, 72),
+          color: const Color.fromARGB(255, 19, 96, 184),
         ),
       ),
     );

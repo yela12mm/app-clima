@@ -5,16 +5,16 @@ class Load extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 600,
+      height: 200,
       width: 450,
       margin: EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 132, 170, 124),
+        color: const Color.fromARGB(68, 255, 255, 255),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Center(
         child: CircularProgressIndicator(
-          color: const Color.fromARGB(255, 57, 74, 54),
+          color: const Color.fromARGB(255, 19, 96, 184),
           strokeWidth: 4,
         ),
       ),

@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SuccessGlo extends StatelessWidget {
-  final Temperatura temperatura;
-  final List<Pronostico>pronostico;
-  const SuccessGlo({Key? key, required this.temperatura, required this.pronostico}) : super(key: key);  
+  final Temperatura?temperatura;
+  final List<Pronostico>?pronostico;
+  const SuccessGlo({Key? key,this.temperatura,  this.pronostico}) : super(key: key);  
 
   Widget build(BuildContext context) {
     
@@ -61,9 +61,9 @@ class SuccessGlo extends StatelessWidget {
     
           children: [
             const SizedBox(height: 24),
-            Success(temperatura:temperatura),
+            Success(temperatura:temperatura!),
             const SizedBox(height: 10),
-            Home(pronostico: pronostico),
+            Home(pronostico: pronostico!),
           ],
         ),
 
