@@ -17,8 +17,9 @@ final class CubitHome extends CubitState {
 final class CubitLoad extends CubitState {}
 
 final class CubitFail extends CubitState {}
+
 final class CubitData extends CubitState {
-    final List<Pronostico>? forecast;
+  final List<Pronostico>? forecast;
   final List<Pronostico>? forecastday;
   const CubitData({this.forecast, this.forecastday});
   @override

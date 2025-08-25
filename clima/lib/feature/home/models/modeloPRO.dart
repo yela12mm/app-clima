@@ -4,8 +4,8 @@ class Pronostico extends Equatable {
   final String? date;
   final double? maxtempC;
   final double? mintempC;
-  final String? conditionText; // Nuevo campo
-  final String? conditionIcon; // Nuevo campo
+  final String? conditionText;
+  final String? conditionIcon;
 
   const Pronostico({
     required this.date,
@@ -16,7 +16,13 @@ class Pronostico extends Equatable {
   });
 
   @override
-  List<Object?> get props => [date, maxtempC, mintempC, conditionText, conditionIcon];
+  List<Object?> get props => [
+    date,
+    maxtempC,
+    mintempC,
+    conditionText,
+    conditionIcon,
+  ];
 
   factory Pronostico.fromJson(Map<String, dynamic> json) {
     return Pronostico(
