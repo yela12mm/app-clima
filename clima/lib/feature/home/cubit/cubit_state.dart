@@ -7,8 +7,8 @@ sealed class CubitState extends Equatable {
 }
 
 final class CubitHome extends CubitState {
-  final List<Pronostico>? forecast;
-  final List<Pronostico>? forecastday;
+  final List<Pronostico> forecast;
+  final List<Pronostico> forecastday;
   const CubitHome({required this.forecast, required this.forecastday});
   @override
   List<Object?> get props => [forecast, forecastday];

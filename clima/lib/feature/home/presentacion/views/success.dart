@@ -31,11 +31,11 @@ class Success extends StatelessWidget {
                style: TextStyle(fontSize: 20),
 
            ),
-           ElevatedButton(
+           TextButton(
             onPressed: () {
               context.read<BlocBloc>().add(HomeSearchPressed());
             },
-            child: const Text('Actualizar'),
+            child: const Text('Actualizar tiempo'),
       )
           ],
         )

@@ -1,3 +1,4 @@
+import 'package:clima/feature/home/models/modeloPRO.dart';
 import 'package:clima/feature/home/models/modeloTEM.dart';
 import 'package:clima/feature/home/presentacion/page/home.dart';
 import 'package:clima/feature/home/presentacion/views/success.dart';
@@ -6,8 +7,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 class SuccessGlo extends StatelessWidget {
   final Temperatura temperatura;
-  const SuccessGlo({Key? key, required this.temperatura}) : super(key: key);  
-  @override
+  final List<Pronostico>pronostico;
+  const SuccessGlo({Key? key, required this.temperatura, required this.pronostico}) : super(key: key);  
+
   Widget build(BuildContext context) {
     
     return Scaffold(
@@ -61,7 +63,7 @@ class SuccessGlo extends StatelessWidget {
             const SizedBox(height: 24),
             Success(temperatura:temperatura),
             const SizedBox(height: 10),
-            Home()
+            Home(pronostico: pronostico),
           ],
         ),
 

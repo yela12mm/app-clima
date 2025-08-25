@@ -7,9 +7,9 @@ sealed class BlocState extends Equatable {
 }
 
 final class BlocInitial extends BlocState {
-  final Temperatura? location;
+  final Temperatura?location;
   final Temperatura? current;
-  const BlocInitial({required this.location, required this.current});
+  const BlocInitial({this.location, this.current});
   @override
   List<Object?> get props => [location, current];
 }

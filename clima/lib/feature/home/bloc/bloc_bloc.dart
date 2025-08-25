@@ -7,17 +7,19 @@ part 'bloc_event.dart';
 part 'bloc_state.dart';
 
 class BlocBloc extends Bloc<BlocEvent, BlocState> {
-  final Temperatura temperatura;
-  BlocBloc({required this.temperatura})
-    : super(BlocInitial(location: temperatura, current: temperatura)) {
-    on<HomeSearchPressed>((event, emit) async {
+  final Temperatura? temperatura;
+  BlocBloc({this.temperatura})
+      : super(BlocLoading()) {
+        on<HomeSearchPressed>(_onSearch);
+      }
+      Future<void>_onSearch(HomeSearchPressed event, Emitter<BlocState> emit) async {
       emit(BlocLoading());
       try {
         final temperatura = await fetchCurrentWeather();
         emit(BlocInitial(location: temperatura, current: temperatura));
       } catch (a) {
         emit(BlocFailure());
-      }
-    });
+      
+    }
   }
 }
